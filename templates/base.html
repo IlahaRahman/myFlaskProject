@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+{#    <a href="#">You are in the HomePage</a>#}
+</head>
+<body>
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href ="{{ url_for('index') }}">Home Page</a>
+
+    </nav>
+
+    {% block  content%}
+
+    {% endblock %}
+
+</body>
+</html>
