@@ -30,7 +30,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.ilaha.rahman }}
-          password: ${{ secrets.Rahman98# }}
+          password: "${{ secrets.Rahman98# }}"
 
       - name: Build Docker Image
         run: docker build -t ${{ secrets.ilaharahman }}/flask-app:latest .
