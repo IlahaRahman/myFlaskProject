@@ -29,11 +29,11 @@ jobs:
       - name: Log in Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.ilaharahman }}
-          password: ${{ secrets.Rahman9819 }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t ${{ secrets.ilaharahman }}/flask-app:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/flask-app:latest .
 
       - name: Push Docker Image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
